@@ -1,0 +1,40 @@
+{% extends "admin/base.html" %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <style>
+        .main {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        #content-start {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        #content {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        #nav-sidebar {
+            width: 200px;
+            min-width: 200px;
+            flex: 0 0 200px;
+        }
+
+        @media (max-width: 900px) {
+            .main {
+                display: block;
+            }
+
+            #nav-sidebar {
+                width: 100%;
+                min-width: 100%;
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+{% endblock %}
